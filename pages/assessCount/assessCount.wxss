@@ -1,0 +1,44 @@
+/* pages/assessCount/assessCount.wxss */
+.outer {
+  display: flex;
+  border-radius: 50rpx;
+  margin: 0 20rpx 20rpx 20rpx;
+  
+  position: relative;
+}
+.outer1 {
+  position: relative;
+}
+.unitname {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.unitname-detail {
+  position: absolute;
+  background-color: white;
+  width: 75%;
+  white-space: normal;
+  word-break: break-all;
+  word-wrap: break-word;
+  right: 30rpx;
+  text-decoration: underline;
+}
+.inner1 {
+  text-align: left;
+  flex: 0.5;
+  padding: 20rpx 0 20rpx 30rpx;
+}
+.inner2 {
+  text-align: right;
+  flex: 0.5;
+  padding: 20rpx 30rpx 20rpx 0;
+}
+.button-detail {
+  border-radius: 30rpx;
+  padding: 20rpx;
+  margin: 30rpx auto;
+  width: 200rpx;
+  text-align: center;
+}
+

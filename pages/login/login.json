@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "header": "../../component/header/header",
+    "navigationBar": "../../component/navigationBar/navigationBar"
+  }
+}

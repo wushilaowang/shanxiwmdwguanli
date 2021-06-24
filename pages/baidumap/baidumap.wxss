@@ -1,0 +1,81 @@
+/* pages/baidumap/baidumap.wxss */
+.continer {
+  position: relative;
+  margin-top: -1vh;
+}
+.map-top {
+  padding: 0 10rpx;
+  margin: 0 10rpx 32rpx;
+  border: 1rpx solid black;
+  border-radius: 20rpx;
+  display: flex;
+  height: 5vh;
+}
+.map-top-left {
+  margin: auto 0;
+  flex: .8;
+}
+.map-top-right {
+  margin: auto 0;
+  flex: .2;
+  text-decoration: underline;
+}
+.origin {
+  position: absolute;
+  bottom: 4%;
+  left: 4%;
+  width: 80rpx;
+  height: 80rpx;
+}
+.under {
+  display: flex;
+  margin: 0 14rpx;
+  height: 8vh;
+}
+.under-map {
+  flex: .8;
+}
+.under-right {
+  flex: .2
+}
+.under-map-unit {
+  display: flex;
+  /* background-color: rgb(57, 181, 74); */
+  border-radius: 25rpx;
+  margin: 10rpx 0;
+  padding: 12rpx 0 12rpx 18rpx;
+}
+.picker {
+  border-radius: 25rpx;
+  padding: 12rpx 0 12rpx 18rpx;
+}
+.go-there {
+  background-color: white;
+  border: 1rpx solid #b3b3b3;
+  padding: 20rpx;
+}
+
+
+.gothere-left {
+  /* display: inline-block; */
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.gothere-right {
+  /* display: inline-block; */
+  flex: .2;
+}
+.gothere-there-right-image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.gothere-text {
+  text-decoration: underline;
+}
+.under-right-button {
+  padding: 10rpx 30rpx 10rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  margin: 48rpx 0 0 10rpx;
+  border: 2rpx solid #b3b3b3;
+}

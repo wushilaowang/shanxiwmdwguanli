@@ -1,0 +1,74 @@
+/* pages/queryStuff/queryStuff.wxss */
+
+@import "/wxParse/wxParse.wxss";
+
+.outer-view {
+  padding-top: 169rpx;
+}
+.query {
+  display: flex;
+  padding: 0 20rpx;
+  margin: 30rpx 0;
+  font-size: 26rpx;
+  color: rgb(57, 181, 74);
+}
+.list {
+  padding: 0 20rpx;
+}
+.text-unit {
+  flex: 0.15;
+  text-align: center;
+  padding-top: 8rpx;
+}
+.input-unit {
+  flex: 0.5;
+  border-bottom: 2rpx solid #d3d3d3;
+}
+.input-button {
+  flex: 0.15;
+  border-radius: 8rpx;
+  border: 1rpx solid rgb(57, 181, 74);
+  padding: 8rpx;
+  text-align: center;
+  margin: 0 20rpx;
+}
+.input-show {
+  flex: 0.2;
+  border-radius: 8rpx;
+  padding: 8rpx;
+  text-align: center;
+  border: 1rpx solid rgb(57, 181, 74);
+}
+
+.assess-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  border-bottom: 2rpx solid rgb(57, 181, 74);
+}
+.stuff-detail {
+  padding: 0 20rpx;
+}
+
+.cut-line {
+  border-bottom: 2rpx solid #b3b3b3;
+  margin: 10rpx 0;
+  padding-bottom: 10rpx;
+}
+
+.backtop {
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+}
+.backtop-image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.wxParse-img {
+  width: 20rpx;
+  height: 20rpx;
+}

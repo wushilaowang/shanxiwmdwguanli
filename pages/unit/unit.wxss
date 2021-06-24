@@ -1,0 +1,39 @@
+/* pages/unit/unit.wxss */
+
+.outer {
+  display: flex;
+  /* border-bottom: solid 2rpx rgb(57, 181, 74); */
+  /* background-color: rgb(57, 181, 74); */
+  /* background-color: rgb(247, 212, 144); */
+  border-radius: 50rpx;
+  margin: 30rpx 20rpx 20rpx 20rpx;
+}
+.inner1 {
+  text-align: left;
+  flex: 0.4;
+  padding: 20rpx 0 20rpx 30rpx;
+}
+.inner2 {
+  text-align: right;
+  flex: 0.6;
+  padding: 20rpx 30rpx 20rpx 0;
+}
+.outer:nth-child(1) {
+  border-top: 2rpx solid #f3f3f3;
+}
+.infomation {
+  width: 660rpx;
+  height: 300rpx;
+  overflow: scroll;
+  margin: 20rpx auto;
+  padding: 20rpx;
+  border-radius: 30rpx;
+}
+
+
+
+.inner2-image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}

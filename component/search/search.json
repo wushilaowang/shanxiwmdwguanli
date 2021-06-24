@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "pageBar": "/component/pageBar/pageBar"
+  }
+}

@@ -1,0 +1,76 @@
+/* pages/stuff/stuff.wxss */
+.outer-view {
+  padding: 0 15rpx;
+}
+.outer-score {
+  font-weight: bold;
+}
+.score {
+  font-size: 34rpx;
+}
+.query-button {
+  width: 80rpx;
+  border: 1rpx solid rgb(57, 181, 74);
+  border-radius: 30rpx;
+  padding: 10rpx 20rpx;
+  color: rgb(57, 181, 74);
+  text-align: center;
+}
+.unitname {
+  color: #999;
+}
+.title {
+  text-align: center;
+  margin: 0 120rpx 30rpx 120rpx;
+  font-size: 44rpx;
+}
+.item {
+  margin-bottom: 10rpx;
+}
+.parent {
+  padding-left: 66rpx;
+  margin: 24rpx 0;
+  font-size: 34rpx;
+  border-radius: 30rpx;
+  display: flex;
+  padding: 10rpx 0;
+  border: 2rpx solid #b3b3b3;
+}
+.parent .left {
+  flex: 0.1
+}
+.parent .center {
+  flex: 0.78;
+}
+.parent .right {
+  position: relative;
+  font-size: 28rpx;
+  font-weight: bold;
+  flex: 0.12
+}
+.right-score {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.parent-image {
+  width: 30rpx;
+  height: 30rpx;
+  padding: 5rpx 20rpx;
+  margin-top: 7rpx;
+}
+
+.child {
+  padding: 10rpx 14rpx 0 14rpx;
+  border-bottom: 1rpx solid #e3e3e3;
+  font-size: 30rpx;
+}
+
+.count-score {
+  font-weight: bold;
+  padding-right: 30rpx;
+  text-align: right;
+}
+.count-score-font {
+  font-size: 28rpx;
+}

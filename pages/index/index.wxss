@@ -1,0 +1,59 @@
+/* pages/index/index.wxss */
+
+
+.index-image {
+  position: fixed;
+  z-index: -1;
+  width: 48%;
+  height: 200rpx;
+}
+.swiper-outer {
+  margin-top: -1vh;
+}
+.swiper-image {
+  height: 300rpx;
+  width: 100%;
+}
+
+.box {
+  margin-top: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.item {
+  margin-bottom: 20rpx;
+  width: 48%;
+  height: 200rpx;
+}
+
+.item-image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.go-login {
+  text-align: center;
+  width: 200rpx;
+  padding: 20rpx 20rpx;
+  border: 1rpx solid #b3b3b3;
+  margin: 0 auto;
+  border-radius: 30rpx;
+}
+
+.swiper-item1 {
+  position: relative;
+}
+
+.swiper-text {
+  width: 100%;
+  position: absolute;
+  font-size: 26rpx;
+  bottom: 0rpx;
+  color: white;
+  background: rgba(0,0,0,0.3);
+  padding: 10rpx 10rpx 15rpx 10rpx;
+  height: 32rpx;
+  overflow: auto;
+}

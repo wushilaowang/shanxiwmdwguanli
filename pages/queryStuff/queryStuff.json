@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "pageBar": "../../component/pageBar/pageBar",
+    "navigationBar": "../../component/navigationBar/navigationBar",
+    "header": "/component/header/header",
+    "search": "/component/search/search"
+  }
+}

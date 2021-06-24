@@ -1,0 +1,31 @@
+<!--pages/index/index.wxml-->
+<view class="top-fixed">
+  
+  <navigationBar title="主页" isLoginPage="{{isLoginPage}}" showBar="{{showBar}}"/>
+  <swiper style="height:{{sysHeight/3}}px" class="swiper-outer" autoplay="true" circular="true">
+    <block wx:for="{{swiper}}" wx:for-item="item" wx:key="index">
+      <swiper-item><view class="swiper-item1"><image class="swiper-image" style="height:{{sysHeight/3}}px" src="{{item.url}}"></image><view class="swiper-text">{{item.remark}}</view></view></swiper-item>
+    </block>
+  </swiper>
+  <view class="box">
+    <view class="item">
+      <image class="item-image" src="/assets/image/tabbar/group3.png"></image>
+      <view>查询单位信息</view>
+    </view>
+    <view class="item">
+      <image class="item-image" src="/assets/image/tabbar/notice3.png"></image>
+      <view>通知管理</view>
+    </view>
+    <view class="item">
+      <image class="item-image" src="/assets/image/tabbar/detail3.png"></image>
+      <view>考核统计查询</view>
+    </view>
+    <view class="item">
+      <image class="item-image" src="/assets/image/tabbar/instruction3.png"></image>
+      <view>查看材料内容</view>
+    </view>
+  </view>
+  
+  
+  <view class="go-login" bindtap="handleLogin">前往登陆</view>
+</view>

@@ -1,0 +1,16 @@
+<!--pages/notification/notification.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="top-fixed">
+  <view><navigationBar title="通知管理" showBar="{{showBar}}"  menuList="{{appMenuList}}"/></view>
+  <view class="contianer">
+    <view class="policy backcolor">测评指标</view>
+    <block wx:for="{{policyList}}" wx:for-item="item" wx:key="index">
+      <view class="policy-item backcolor" bindtap="handlePolicy" data-value="{{item.fileUrl}}">{{item.title}}</view>
+    </block>
+    <view class="backcolor policy">通知</view>
+    <block wx:for="{{noticeList}}" wx:for-item="item" wx:key="index">
+      <view class="backcolor policy-item" bindtap="handleNotice" data-value="{{item.content}}">{{item.title}}</view>
+    </block>
+    <view class="notice-detail"><template is="wxParse" data="{{wxParseData:notice.nodes}}"/></view>
+  </view>
+</view>

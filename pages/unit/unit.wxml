@@ -1,0 +1,57 @@
+<!-- pages/unit/unit.wxml -->
+
+<view class="outer-view top-fixed">
+    <navigationBar title="单位管理" showBar="{{showBar}}"  menuList="{{appMenuList}}"/>
+    <search id="unitSearch" queryUrl="{{queryUrl}}" bind:itemClick="handleBindListData"/>
+    <view class="outer backcolor">
+        <view class="inner1">单位名称</view>
+        <view class="inner2">{{unitTable.fullname}}</view>
+    </view>
+    <view class="outer backcolor">
+        <view class="inner1">主要领导</view>
+        <view class="inner2"><input data-tag="mainleader" bindblur="handleChangeInfo" bindinput="bindKeyInput"  value="{{unitTable.mainleader}}"></input></view>
+    </view>
+    <view class="outer backcolor">
+        <view class="inner1">主要领导手机</view>
+        <view class="inner2"><input data-tag="mainleadertel" bindblur="handleChangeInfo" bindinput="bindKeyInput" value="{{unitTable.mainleadermobile}}"></input></view>
+    </view>
+    <view class="outer backcolor">
+        <view class="inner1">分管领导</view>
+        <view class="inner2"><input data-tag="leader2" bindblur="handleChangeInfo" bindinput="bindKeyInput" value="{{unitTable.leader2}}"></input></view>
+    </view>
+    <view class="outer backcolor">
+        <view class="inner1">分管领导座机</view>
+        <view class="inner2"><input data-tag="leader2tel" bindblur="handleChangeInfo" bindinput="bindKeyInput" value="{{unitTable.leader2mobile}}"></input></view>
+    </view>
+    <view class="outer backcolor">
+        <view class="inner1">部门负责人</view>
+        <view class="inner2"><input data-tag="departleader" bindblur="handleChangeInfo" bindinput="bindKeyInput" value="{{unitTable.departleader}}"></input></view>
+    </view>
+    <view class="outer backcolor">
+        <view class="inner1">部门负责人手机</view>
+        <view class="inner2"><input data-tag="departleader" bindblur="handleChangeInfo" bindinput="bindKeyInput" value="{{unitTable.departleadermobile}}"></input></view>
+    </view>
+    <view class="outer backcolor">
+        <view class="inner1">工作人员</view>
+        <view class="inner2"><input data-tag="publicman" bindblur="handleChangeInfo" bindinput="bindKeyInput" value="{{unitTable.publicman}}"></input></view>
+    </view>
+    <view class="outer backcolor">
+        <view class="inner1">工作人员手机</view>
+        <view class="inner2"><input data-tag="publicmantel" bindblur="handleChangeInfo" bindinput="bindKeyInput" value="{{unitTable.publicmanmobile}}"></input></view>
+    </view>
+    <view class="outer backcolor">
+        <view class="inner1">单位等级</view>
+        <view class="inner2">{{unitLevel}}</view>
+    </view>
+    <view class="outer backcolor">
+        <view class="inner1">地址</view>
+        <view class="inner2"><input data-tag="address" bindblur="handleChangeInfo" bindinput="bindKeyInput" value="{{unitTable.address}}"></input></view>
+    </view>
+    <view class="outer backcolor" bindtap="handleShowInfomation">
+       <view class="inner1">单位简介</view>
+        <view class="inner2"><image class="inner2-image" src="/assets/image/other/eglass-arrow-down2.png"></image></view>
+    </view>
+    <textarea class="infomation backcolor" style="display:{{showInfomation}}">
+        <view><input data-tag="remark" bindblur="handleChangeInfo" bindinput="bindKeyInput" value="{{unitTable.remark}}"></input></view>
+    </textarea>
+</view>

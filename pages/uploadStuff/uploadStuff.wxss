@@ -1,0 +1,80 @@
+/* pages/uploadStuff.wxss */
+
+.root {
+  font-size: 34rpx;
+  font-weight: bolder;
+}
+.catalog {
+  font-size: 32rpx;
+  font-weight: bolder;
+}
+.assess {
+  font-size: 30rpx;
+  font-weight: bolder;
+}
+
+.assess-style {
+  position:fixed;
+  top: 150rpx;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@import "./assets/weui.wxss";
+@import "./assets/iconfont.wxss";
+@import "./assets/iconfont1.wxss";
+
+.wrapper {
+  padding: 5px;
+}
+
+.iconfont {
+  display: inline-block;
+  padding: 8px 8px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.toolbar {
+  box-sizing: border-box;
+  /* border: 1px solid #ccc; */
+  border-bottom: 0;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.toolbar i {
+  flex-basis: 65rpx;
+}
+.i-text {
+  padding: 24rpx 21rpx 10rpx 21rpx
+}
+
+
+.ql-container {
+  box-sizing: border-box;
+  padding: 12px 15px;
+  width: 100%;
+  min-height: 30vh;
+  height: auto;
+  /* border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; */
+  background: #fff;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ql-active {
+  color: #06c;
+}
+

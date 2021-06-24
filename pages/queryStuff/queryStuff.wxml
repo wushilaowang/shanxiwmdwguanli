@@ -1,0 +1,24 @@
+<!--pages/queryStuff/queryStuff.wxml-->
+<!-- state 1 待上报 2 待审核 3 通过 4 拒绝 5 归档 -->
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view class="outer-view">
+  <view>
+    <navigationBar title="材料查询" showBar="{{showBar}}" menuList="{{appMenuList}}"/>
+  </view>
+  
+  <scroll-view scroll-with-animation scroll-y="true" scroll-top="{{scrollTop}}" style="height:{{scrollHeight}}px" bindscroll="scroll">
+    <view>
+      <search id="stuffSearch" queryUrl="{{queryUrl}}" showDate="{{showDate}}" bind:itemClick="handleBindListData"/>
+      
+      <view wx:if="{{showStuffContent}}" class="stuff-detail">
+        <view>标题:<view class="cut-line">{{currentStuff.name}}</view></view>
+        <view>标准:<view class="cut-line">{{currentStuff.assessName}}</view></view>
+        <template is="wxParse" data="{{wxParseData:test.nodes}}"/>
+      </view>
+    </view>
+  </scroll-view>
+  <view wx:if="{{showBacktop}}" class="backtop" bindtap="handleBacktop">
+    <image src="/assets/image/other/backtop.png" class="backtop-image"></image>
+  </view>
+</view>

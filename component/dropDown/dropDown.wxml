@@ -1,0 +1,23 @@
+<!--component/dropDown/dropDown.wxml-->
+<view class="dropdown">
+<!-- 根 -->
+  <block wx:for="{{arr.length>0?arr:listArr}}" wx:for-item="item" wx:key="index">
+    <view class="father" data-item="{{item.assess.name}}" catchtap="handleFatherClick"><i class="iconfont icon-down"></i>{{item.assess.name}}</view>
+    <!-- 一层 -->
+    <block wx:for="{{item.children}}" wx:for-item="item1" wx:key="index1">
+      <view wx:if="{{item.children.length>0}}" style="display:{{item.spread?'block':'none'}}">
+        <view class="children" data-item="{{item1.assess.name}}" catchtap="handleFatherClick"><i class="{{item1.children.length>0?'iconfont icon-down':'iconfont icon-xuanze1'}}"></i>{{item1.assess.name}}</view>
+        <block wx:for="{{item1.children}}" wx:for-item="item2" wx:key="index2">
+          <view wx:if="{{item1.children.length>0}}" style="display:{{item1.spread?'block':'none'}}">
+            <view class="grandchildren" data-item="{{item2.assess.name}}" catchtap="handleFatherClick"><i class="{{item2.children.length>0?'iconfont icon-down':'iconfont icon-xuanze1'}}"></i>{{item2.assess.name}}</view>
+            <block wx:for="{{item2.children}}" wx:for-item="item3" wx:key="index3">
+              <view wx:if="{{item2.children.length>0}}" style="display:{{item2.spread?'block':'none'}}">
+                <view class="grandgrandchildren" data-item="{{item3.assess.name}}" catchtap="handleFatherClick"><i class="{{item3.children.length>0?'iconfont icon-down':'iconfont icon-xuanze1'}}"></i>{{item3.assess.name}}</view>
+              </view>
+            </block>
+          </view>
+        </block>
+      </view>
+    </block>
+  </block>
+</view>

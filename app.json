@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/uploadStuff/uploadStuff",
+    "pages/bind/bind",
+    "pages/login/login",
+    "pages/assessCount/assessCount",
+    "pages/unit/unit",
+    "pages/baidumap/baidumap",
+    "pages/stuff/stuff",
+    "pages/home/home",
+    "pages/notification/notification",
+    "pages/queryStuff/queryStuff"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于小程序定位"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#39B54A",
+    "navigationBarTitleText": "查分小程序",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
+  },
+  "plugins": {
+    "chooseLocation": {
+      "version": "1.0.3",
+      "provider": "wx76a9a06e5b4e693e"
+    },
+    "routePlan": {
+      "version": "1.0.3",
+      "provider": "wx50b5593e81dd937a"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

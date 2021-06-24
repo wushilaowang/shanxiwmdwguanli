@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "navigationBar": "../../component/navigationBar/navigationBar",
+    "pageBar": "../../component/pageBar/pageBar",
+    "search": "/component/search/search"
+  },
+  "navigationBarTitleText": "考核统计"
+}

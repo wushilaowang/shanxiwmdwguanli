@@ -1,0 +1,52 @@
+<import src="./assets/foot.wxml" />
+<import src="./assets/head.wxml" />
+<navigationBar showBar="true" title="材料编辑上报"></navigationBar>
+<view class="assess-style">{{currentChoseAssess.name}}</view>
+<view style="display:{{showAssess==true?'block':'none'}};z-index:99;background:#c1c1c1;position:fixed;padding:10rpx;top:50rpx;left:30rpx;width:80%;border-radius:10rpx;">
+  <dropDown listArr="{{assess}}" bind:clickAssess="handleChoseAssess"></dropDown>
+    <!-- <block wx:for="{{assess}}" wx:for-item="item" wx:key="index">
+      <view class="root">{{item.assess.name}}</view>
+      <view wx:if="item.children.length>0">
+        <block wx:for="{{item.children}}" wx:for-item="item2" wx:key="index2">
+          <view class="catalog">{{item2.assess.name}}</view>
+          <view wx:if="item2.children.length>0">
+            <block wx:for="{{item2.children}}" wx:for-item="item3" wx:key="index3">
+              <view class="assess" data-assessid="{{item3}}" bindtap="handleChoseAssess">
+                {{item3.assess.name}}
+              </view>
+            </block>
+          </view>
+        </block>
+      </view>
+    </block> -->
+  </view>
+<view class="container">
+  <!-- <template is="head" data="{{title: 'editor'}}"/> -->
+  <view class="page-body">
+    <view class='wrapper'>
+      标题: <input type="text" placeholder="请输入标题" bindinput="handleTitleChange" data-model="title">{{title}}</input>
+      <view class='toolbar' bindtap="format">
+        <i class="iconfont icon-zitijiacu {{formats.bold ? 'ql-active' : ''}}" data-name="bold"></i>
+        <i class="iconfont icon-zitixieti {{formats.italic ? 'ql-active' : ''}}" data-name="italic"></i>
+        
+        <i class="iconfont icon-zuoduiqi {{formats.align === 'left' ? 'ql-active' : ''}}" data-name="align" data-value="left"></i>
+        <i class="iconfont icon-juzhongduiqi {{formats.align === 'center' ? 'ql-active' : ''}}" data-name="align" data-value="center"></i>
+        <i class="iconfont icon-format-header-2 {{formats.header === 2 ? 'ql-active' : ''}}" data-name="header" data-value="{{2}}"></i>
+        <i class="iconfont icon-format-header-3 {{formats.header === 3 ? 'ql-active' : ''}}" data-name="header" data-value="{{3}}"></i>
+        <i class="iconfont icon-fengexian" bindtap="insertDivider"></i>
+        <i class="iconfont icon-charutupian" bindtap="insertImage"></i>
+        <i class="iconfont icon-attachment-fill" catchtouchend="insertFile"></i>
+        <i bindtap="handleVideoUpload" class="i-text">视频</i>
+        <i bindtap="handleClickAssess" class="i-text">标准</i>
+        <i bindtap="handleSave" class="i-text">保存</i>
+        <i bindtap="handleUpload" class="i-text">上传</i>
+        <i style="flex-grow:1"></i>
+      </view>
+
+      <editor id="editor" class="ql-container" placeholder="{{placeholder}}" showImgSize showImgToolbar showImgResize bindstatuschange="onStatusChange"  read-only="{{readOnly}}" bindready="onEditorReady">
+      </editor>
+
+    </view>
+  </view>
+
+</view>

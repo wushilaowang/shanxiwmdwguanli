@@ -1,0 +1,98 @@
+/* component/navigationBar.wxss */
+.outer-view {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 164rpx;
+  z-index: 99;
+  /* background: linear-gradient(#39b54a, #8dc63f) */
+}
+.menu-outer {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+.title {
+  color: white;
+  position: absolute;
+  top: 90rpx;
+  right: 50%;
+  transform: translate(50%, 0);
+}
+.menu-item {
+  display: flex;
+  padding: 15rpx 0;
+  border-bottom: solid 2rpx #a3a3a3;
+}
+.item-image{
+  padding-left: 20rpx;
+  width: 45rpx;
+  height: 45rpx;
+}
+.item-text {
+  padding-top: 6rpx;
+  font-weight: bold;
+  margin-left: 6rpx;
+}
+.menu {
+  position: fixed;
+  right: 20rpx;
+  border-radius: 20rpx;
+  vertical-align: middle;
+  width: 240rpx;
+  height: 40vh;
+  background-color: rgba(211,211,211,0.9);
+  font-size: 24rpx;
+  z-index: 9999;
+  top: 170rpx;
+  border: 1rpx solid #a3a3a3;
+}
+.menu-text {
+  width: 40rpx;
+}
+.is-login-page {
+  background-color: rgba(0,0,0,0.4);
+  width: 110rpx;
+  height: 50rpx;
+  border-radius: 50rpx;
+  border: solid 1rpx #e3e3e3;
+  color: white;
+  text-align: center;
+  position: fixed;
+  top: 5%;
+  left: 2%;
+}
+.navigation {
+  position: absolute;
+  top: 24rpx;
+  padding: 54rpx 0 0 20rpx;
+}
+.navigation-left {
+  height: 46rpx;
+  display: flex;
+  border: 1rpx solid #e3e3e3;
+  border-radius: 40rpx;
+  /* width: 200rpx; */
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding-top: 7rpx;
+  font-size: 28rpx;
+}
+.navigation-menu,.navigation-back {
+  flex: 1;
+}
+
+.back-text {
+  /* border-right: solid 1rpx white; */
+  padding: 0 20rpx;
+  vertical-align: bottom;
+}
+.back-image {
+  width: 50rpx;
+}
+
+.navigation-left .menu-image {
+  flex: 1
+}
+

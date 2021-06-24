@@ -1,0 +1,11 @@
+<!--component/header/header.wxml-->
+<view class="header">
+  <view class="header-left">
+    <slot name="search"/>
+      <!-- <view class="search" bindtap="handleShowList">搜索</view> -->
+  </view>
+  <view class="header-right">
+    <slot name="menuList"/>
+      <!-- <navigationBar  menuList="{{appMenuList}}"/> -->
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<!--component/dialog/dialog.wxml-->
+<view class="outer">
+  <view class="shadow" wx-if="{{showDialog}}" mut-bind:tap="handleHidden">
+  <view class="content" mut-bind:tap="handleShow">
+    <slot/>
+  </view>
+    
+  </view>
+</view>

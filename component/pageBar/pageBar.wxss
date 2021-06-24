@@ -1,0 +1,30 @@
+/* component/pageBar/pageBar.wxss */
+.outer {
+  font-size: 24rpx;
+  display: flex;
+  width: 430rpx;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 6rpx;
+  margin: 20rpx 0;
+}
+.totalPage {
+  flex: 0.25;
+  border-right: 2rpx solid #b3b3b3;
+}
+.prePage {
+  flex: 0.25;
+  border-right: 2rpx solid #b3b3b3;
+
+}
+.currentPage {
+  flex: 0.25;
+  border-right: 2rpx solid #b3b3b3;
+}
+.nextPage {
+  flex: 0.25
+}
+
+.bordercolor {
+  border: solid 2rpx #b3b3b3;
+}

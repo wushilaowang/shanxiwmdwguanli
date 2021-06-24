@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "pageBar": "/component/pageBar/pageBar",
+    "navigationBar": "/component/navigationBar/navigationBar",
+    "search": "/component/search/search"
+  },
+  "navigationBarTitleText": "成绩明细"
+}

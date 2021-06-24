@@ -1,0 +1,29 @@
+<!--pages/stuff/stuff.wxml-->
+<!-- 考核明细页面 -->
+<view class="top-fixed">
+  <navigationBar title="考核明细" showBar="{{showBar}}" menuList="{{appMenuList}}"/>
+  <search id="detailSearch" queryUrl="{{queryUrl}}" bind:itemClick="handleBindListData"/>
+  <view class="outer-view">
+    <view class="unitname">{{currentUnitName}}</view>
+    <view class="title">{{stuffList[0].content}}</view>
+    <block wx:for="{{stuffList[1]}}" wx:for-item="item" wx:key="index">
+      <view class="item">
+        <view class="parent" data-id="{{item.assessid}}" bindtap="handleShowChild">
+          <view class="left">
+            <image wx:if="{{currentIndex==item.assessid}}" class="parent-image" src="/assets/image/other/eglass-arrow-down2.png"></image>
+            <image wx:else class="parent-image" src="/assets/image/other/eglass-arrow-up.png"></image>
+          </view>
+          <view class="center">{{item.name}}</view>
+          <view class="right"></view>
+        </view>
+        <block wx:for="{{item.item2}}" wx:key="index" wx:for-item="itemChild">
+          <view class="child" style="{{currentIndex==item.assessid?'display:block':'display:none'}}">
+            <text>{{itemChild.name}}</text>
+            <view class="outer-score">当前得分：<text class="score">{{itemChild.earnScore}}</text> 分</view>
+          </view>
+        </block>
+      </view>
+    </block>
+    
+  </view>
+</view>

@@ -1,0 +1,158 @@
+/* component/search/search.wxss */
+.query {
+  display: flex;
+  padding: 20rpx 40rpx 20rpx 30rpx;
+}
+.query-left {
+  flex: .9;
+  display: flex;
+  position: relative;
+}
+.input {
+  border: none;
+}
+.input-outer {
+ width: 60vw;
+ border-bottom: 1rpx solid black;
+ height: 50rpx;
+ padding: 0rpx 40rpx 0 16rpx;
+ position: relative;
+}
+.input-search {
+ position: absolute;
+ right: -110rpx;
+ bottom: 0;
+ background: #2d8cf0;
+ padding: 8rpx 16rpx;
+ font-size: 28rpx;
+ color: #fff;
+ border-radius: 8rpx;
+}
+.input-clear {
+ position: absolute;
+ right: 0rpx;
+ bottom: 0rpx;
+}
+.input-clear image {
+ width: 40rpx;
+ height: 40rpx;
+}
+.query-button {
+  flex: 0.2;
+  border-radius: 40rpx;
+  padding: 5rpx 10rpx;
+  text-align: center;
+}
+.amplification {
+  width: 50rpx;
+  height: 50rpx;
+}
+.pulldown {
+  flex: .1;
+}
+.pulldown-image {
+  width: 25rpx;
+  height: 25rpx;
+  text-align: center;
+  margin: 10rpx 0 0 50rpx;
+}
+
+.list  {
+  margin: 0 20rpx
+}
+.item {
+  padding: 6rpx 0 6rpx 20rpx;
+  margin-bottom: 10rpx;
+  border-radius: 20rpx;
+}
+.stuff-record {
+  text-decoration: underline;
+}
+.page {
+  margin: 0 auto;
+}
+.checkbox-group {
+  margin-left: 15rpx;
+}
+.checkbox {
+  margin-bottom: 10rpx;
+  width: 29%;
+  font-size: 28rpx;
+}
+
+
+.record-outer {
+  position: fixed;
+  top: 35%;
+  width: 95%;
+  height: 50vh;
+  background: rgba(211,211,211,0.95);
+  padding: 20rpx 20rpx 0 20rpx;
+}
+.record-title {
+  border-bottom: 2rpx solid white;
+  margin-bottom: 20rpx;
+}
+.close {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  top: 7rpx;
+  right: 25rpx;
+}
+.close-image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.item-top {
+  border-top: 2rpx solid white;
+}
+.box {
+  display: flex;
+  font-size: 28rpx;
+  text-align: center;
+  position: relative;
+}
+.item4 {
+  border-right: solid 2rpx white;
+}
+.item1, .item2, .item3, .item4 {
+  border-left: solid 2rpx white;
+  border-bottom: solid 2rpx white;
+}
+.item1 {
+  flex: .15;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.auditor {
+  width: 75%;
+  position: absolute;
+  top: 20rpx;
+  right: 40rpx;
+  z-index: 99;
+  background-color: white;
+  word-break: break-all;
+  white-space: normal;
+  word-wrap: break-word;
+  border-radius: 20rpx;
+}
+.item2 {
+  flex: .2
+}
+.item3 {
+  flex: .1
+}
+.item4 {
+  flex: .55
+}
+
+
+
+.backcolor {
+  background-color: black;
+}
+.bordercolor {
+  border: solid 2rpx #b3b3b3;
+}

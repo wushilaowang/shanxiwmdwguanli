@@ -1,0 +1,9 @@
+<!--component/pageBar/pageBar.wxml-->
+
+<view class="outer bordercolor">
+<view class="totalPage">共{{totalPage}}页</view>
+<view class="prePage" bindtap="handlePrevious">上一页</view>
+<view class="currentPage">第{{currentPage}}页</view>
+<view class="nextPage" bindtap="handleNext">下一页</view>
+<view></view>
+</view>

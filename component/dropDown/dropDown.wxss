@@ -1,0 +1,25 @@
+/* component/dropDown/dropDown.wxss */
+
+@import '../../pages/uploadStuff/assets/iconfont1.wxss';
+
+.dropdown i {
+  font-size: 24rpx;
+  margin-right: 10rpx;
+}
+.dropdown {
+  height: 80vh;
+  overflow: scroll;
+}
+
+
+.children {
+  text-indent: 20rpx;
+}
+
+.grandchildren {
+  text-indent: 40rpx;
+}
+
+.grandgrandchildren {
+  text-indent: 60rpx;
+}

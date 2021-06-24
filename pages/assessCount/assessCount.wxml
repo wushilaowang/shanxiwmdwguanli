@@ -1,0 +1,47 @@
+<!--pages/assessCount/assessCount.wxml考核统计页面-->
+<view class="top-fixed">
+    <view class="query-list-outer">
+        <view slot="menuList">
+            <navigationBar title="考核统计" showBar="{{showBar}}" menuList="{{appMenuList}}"/>
+        </view>
+        <search id="countSearch" queryUrl="{{queryUrl}}" showDate="true" bind:itemClick="handleBindListData"/>
+    </view>
+    <view style="display:{{shwoDetail}}">
+        <view class="outer backcolor outer1">
+            <view class="inner1">单位</view>
+            <view class="inner2 unitname" bindtouchstart="touchStartUnit" bindtouchend="touchEndUnit">
+                <view wx:if="{{showUnitName}}" class="unitname-detail">{{listData.fullname}}</view>
+                <text style="text-decoration:underline">{{listData.fullname}}</text>
+            </view>
+        </view>
+        <view class="outer backcolor">
+            <view class="inner1">测评网络审核分</view>
+            <view class="inner2">{{listData.pcwlshf}}</view>
+        </view>
+        <view class="outer backcolor">
+            <view class="inner1">县综合评分</view>
+            <view class="inner2">{{listData.addon_1}}</view>
+        </view>
+        <view class="outer backcolor">
+            <view class="inner1">地市综合评分</view>
+            <view class="inner2">{{listData.addon_2}}</view>
+        </view>
+        <view class="outer backcolor">
+            <view class="inner1">省文明委综合评分</view>
+            <view class="inner2">{{listData.addon_3}}</view>
+        </view>
+        <view class="outer backcolor">
+            <view class="inner1">附加分</view>
+            <view class="inner2">{{listData.addon_0}}</view>
+        </view>
+        <view class="outer backcolor">
+            <view class="inner1">总成绩</view>
+            <view class="inner2">{{listData.zcj}}</view>
+        </view>
+        <!-- <view bindtap="handleDetail" class="button-detail backcolor">查看详情</view> -->
+    </view>
+</view>
+
+    
+
+

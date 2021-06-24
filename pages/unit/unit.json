@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "navigationBar": "/component/navigationBar/navigationBar",
+    "header": "/component/header/header",
+    "search": "/component/search/search",
+    "pageBar": "/component/pageBar/pageBar"
+  },
+  "navigationBarTitleText": "单位信息"
+}

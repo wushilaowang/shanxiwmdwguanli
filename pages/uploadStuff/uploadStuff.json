@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "navigationBar": "/component/navigationBar/navigationBar",
+    "dropDown": "/component/dropDown/dropDown"
+  },
+  "navigationBarTitleText": "材料编辑上报"
+}

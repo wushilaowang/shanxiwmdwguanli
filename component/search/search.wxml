@@ -1,0 +1,100 @@
+<!--component/search/search.wxml-->
+<view>
+  <view style="display:{{showDate==true?'flex':'none'}}">
+    <view style="margin-left:30rpx">选择时间: </view>
+    <picker mode="date" fields="year" start="2018-01-01" end="2021-12-31" bindchange="handleDateChange" value="{{date}}">
+      <view>{{date}}年</view>
+    </picker>
+  </view>
+  <view class="query">
+    
+    
+    <view class="query-left">
+      <!-- <input class="input" placeholder="请输入单位"  bindinput="handleInputVal" value="{{inputVal}}"></input>
+      <view class="backcolor query-button" bindtap="handleQuery"><image class="amplification" src="/assets/image/other/amplification.png"/></view>
+      <view class="input-clear" bindtap="handleClear"><image src="/assets/image/other/close1.png"></image></view> -->
+      
+      <view class="input-outer">
+        <input type="text" placeholder="请输入单位" class="input"  bindinput="handleInputVal" value="{{inputVal}}"></input>
+        <view class="input-clear" bindtap="handleClear"><image src="/assets/image/other/close1.png"></image></view>
+        <view class="input-search" bindtap="handleQuery">搜索</view>
+      </view>
+    </view>
+    <view class="pulldown" bindtap="handleShowList">
+      <image wx:if="{{showList}}" class="pulldown-image" src="/assets/image/other/eglass-arrow-down2.png"></image>
+      <image wx:else class="pulldown-image" src="/assets/image/other/eglass-arrow-up.png"></image>
+    </view>
+  </view>
+  <view class="list" style="display:{{showList?'block':'none'}}">
+    <view class="checkbox-group" style="display:{{queryUrl=='/stuff'?'block':'none'}}">
+      <checkbox-group bindchange="handleCheckBoxChange">
+        <checkbox class="checkbox" value="1">待上报</checkbox>
+        <checkbox class="checkbox" value="2">待审核</checkbox>
+        <checkbox class="checkbox" value="3">审核通过</checkbox>
+        <checkbox class="checkbox" value="4">审核拒绝</checkbox>
+        <checkbox class="checkbox" value="5">已归档</checkbox>
+      </checkbox-group>
+    </view>
+    <block wx:for="{{queryList}}" wx:for-item="item" wx:key="index">
+      <view class="item bordercolor" bindtap="handleItemClick" data-value="{{item}}">
+        <view wx:if="{{queryUrl=='/unit' || queryUrl=='/checkrecord/assessCount/history'}}">
+          {{item.fullname}}
+        </view>
+        <!-- 材料 -->
+        <wxs module="stuffState">
+          var setState = function(state) {
+            if(state == 1) {
+              return '待上报'
+            }else if(state == 2) {
+              return '待审核'
+            }else if(state == 3) {
+              return '审核通过'
+            }else if(state == 4) {
+              return '审核拒绝'
+            }else if(state ==5) {
+              return '已归档'
+            }
+          }
+          module.exports.setState = setState
+        </wxs>
+        <view wx:elif="{{queryUrl=='/stuff'}}">
+          <view>{{item.unitName}}</view>
+          <view>{{item.name}}</view>
+          <view>
+            <view class="stuff-record" wx:if="{{item.state!=1&&item.state!=2}}" data-value="{{item.stuffid}}" catchtap="handleRecord">审核记录</view>
+            <view>状态:{{stuffState.setState(item.state)}}</view>
+            <view>上报时间:{{item.reportdate}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="page">
+      <pageBar bind:cmpPre="handlePreviousPage" bind:cmpNext="handleNextPage" totalPage="{{totalPage}}" currentPage="{{currentPage}}"/>
+    </view>
+  </view>
+</view>
+
+<!-- 审核记录 -->
+<view class="record-outer" wx:if="{{showRecordList}}">
+  <view class="close" bindtap="handleClose">
+    <image class="close-image" src="/assets/image/other/close.png"></image>
+  </view>
+  <view class="record-title">考核记录</view>
+  <view class="box">
+    <view class="item1 item-top">审核员</view>
+    <view class="item2 item-top">状态</view>
+    <view class="item3 item-top">得分</view>
+    <view class="item4 item-top">备注</view>
+  </view>
+  <block wx:for="{{recordList}}" wx:key="index" wx:for-item="item">
+    <view class="box">
+      <view class="item1" bindtouchstart="touchStartAutidor" bindtouchend="touchEndAutidor">
+        {{item.auditor}}
+        <view wx:if="{{showAuditor}}" class="auditor">{{item.auditor}}</view>
+      </view>
+      <view class="item2">{{item.checktype}}</view>
+      <view class="item3">{{item.manual}}</view>
+      <view class="item4">{{item.remark}}</view>
+    </view>
+  </block>
+</view>

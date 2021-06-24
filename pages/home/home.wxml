@@ -1,0 +1,28 @@
+<!--pages/home/home.wxml-->
+<!-- 登录后菜单页面 -->
+<view class="outer top-fixed">
+  <navigationBar title="主页" showBar="{{showBar}}" isLoginPage="{{isLoginPage}}"/>
+  <view class="header">
+    <view class="header-left"><image class="head-image" src="{{headImgSrc}}"/></view>
+    <view class="user-info">
+      <text class="header-text">您好，{{userInfo.realName}}</text> 
+      <text class="header-text">当前在线{{loginNum}}人</text>
+    </view>
+  </view>
+  
+
+  <view class="container">
+    <block wx:for="{{menuList}}" wx:for-item="item" wx:key="index">
+      <view class="item textcolor backcolor" bindtap="handleRedirect" data-value="{{item.miniUrl}}">
+        <view><image class="item-image" src="{{item.miniIcon}}"/></view>
+        {{item.menuName}}
+      </view>
+    </block>
+  </view>
+  
+
+  <view class="bottom">
+    <view>技术支持: 029-85511589 029-85510437</view>
+    {{copyRight}}
+  </view>
+</view>

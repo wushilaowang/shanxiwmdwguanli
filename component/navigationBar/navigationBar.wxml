@@ -1,0 +1,31 @@
+<!--component/navigationBar.wxml-->
+<view class="outer-view">
+  <image src="/assets/image/other/1_meitu_1.jpg" style="width:100%;height:9vh"></image>
+  
+  <view class="navigation" wx:if="{{showBar}}">
+    <view class="navigation-left">
+      <view class="navigation-back" bindtap="handleBackUpper">
+        <!-- <image class="back-image" src="/assets/image/other/back.png"></image> -->
+        <text class="back-text">返回</text>
+      </view>
+      <!-- <view class="navigation-menu"mut-bind:tap="handleShowMenu">
+        <image class="menu-image" src="/assets/image/other/menu.png" mut-bind:tap="handleShowMenu"></image>
+        菜单
+      </view> -->
+    </view>
+  </view>
+  
+  <view bindtap="handleSingleBack" wx:if="{{isLoginPage}}" class="is-login-page">返回</view>
+  <view class="title">{{title}}</view>
+  
+</view>
+<view class="menu-outer" wx:if="{{isShowMenu}}" mut-bind:tap="handleHiddenMenu">
+  <view class="menu">
+    <block wx:for="{{menuList}}" wx:for-item="item" wx:key="index">
+      <view data-url="{{item.miniUrl}}" class="menu-item" bindtap="handleMenuTransition">
+        <view><image class="meun-icon item-image" src="{{item.miniIcon}}"></image></view>
+        <view class="item-text">{{item.menuName}}</view>
+      </view>
+    </block>
+  </view>
+</view>

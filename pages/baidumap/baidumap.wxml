@@ -1,0 +1,64 @@
+<!--pages/baidumap/baidumap.wxml-->
+<view class="top-fixed">
+<view><navigationBar title="单位地图" showBar="{{showBar}}" menuList="{{appMenuList}}"/></view>
+<view style="display:{{isShowGoThere}};position:relative;z-index:99">
+  <view class="map-top">
+    <view class="map-top-left">
+      <view bindtap="handleShowDetail">{{currentMarker.title}}</view>
+    </view>
+    <view class="map-top-right" bind:tap="handleGoThere">到这里</view>
+  </view>
+  <view style="display:{{isShowDetail}}">
+    <view style="position:absolute;z-index:998;top:60rpx;left:78rpx;width:0;height:0;border-width:0 30rpx 30rpx;border-style:solid;border-color: transparent transparent red"></view>
+    <view style="position:absolute;z-index:999;top:62rpx;left:78rpx;width:0;height:0;border-width:0 30rpx 30rpx;border-style:solid;border-color: transparent transparent white"></view>
+    <view style="position:absolute;left: 40rpx;z-index:998;left:40rpx;width:140rpx;background: #fff;text-align: center;border: 2rpx solid #f00;text-decoration: underline;top:86rpx">
+      <view bindtap="handleBeforeGrade">往年成绩</view> 
+      <view bindtap="handleGoQueryStuff">查看材料</view>
+    </view>
+  </view>
+  <!-- 成绩表 -->
+  <view style="display:{{isShowGrade}};position:absolute;left:60rpx;top:140rpx;z-index:999;background:#fff;border:2rpx solid black;padding:40rpx 20rpx 20rpx 20rpx">
+    <view style="position:absolute;right:6rpx;top:4rpx;text-decoration: underline" bindtap="handleGradeClose">
+      关闭
+    </view>
+    <block wx:for="{{beforeYearsGrade}}" wx:for-item="item" wx:key="index">
+      <view>年份{{item.year}}</view>
+      <view>网络测评得分{{item.pcwlshf}}</view>
+      <view>县综合{{item.addon_1}}</view>
+      <view>市综合{{item.addon_2}}</view>
+      <view>省综合{{item.addon_3}}</view>
+      <view>附加分{{item.addon_0}}</view>
+      <view>总分{{item.zcj}}</view>
+      <view style="border-bottom:2rpx solid black;margin:4rpx 0}}"></view>
+    </block>
+  </view>
+</view>
+<view class="continer"> 
+  <map id="map" show-location="true" longitude="{{longitude}}" latitude="{{latitude}}" scale="12" markers="{{markers}}" bindmarkertap="markertap" data-longitude="" show-location style="width: 100%; height: {{mapHeight}}vh;" circles="{{circles}}" bindtap="handleHiddenGothere">
+  
+  <cover-image class="origin" src="/assets/image/other/origin.png" bindtap="handleGoOrigin"></cover-image>
+  </map>
+  <view class="under">
+    <view class="under-map under-left">
+      <view class="under-map-unit backcolor">
+        <view class="left">
+          <text>单位：</text>
+        </view>
+        <view class="right">
+          <input placeholder="请输入单位" bindinput="getInputValue"></input>
+        </view>
+      </view>
+      <view class="section">
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <view class="picker backcolor">
+            当前选择：{{multiArray[0][multiIndex[0]]}}  {{multiArray[1][multiIndex[1]]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="under-right">
+      <view class="under-right-button bordercolor textcolor" bindtap="handleQueryUnit">查询</view>
+    </view>
+  </view>
+</view>
+</view>
